@@ -6,20 +6,20 @@ Discombobulator is a preprocessor for Minecraft mods. This project is useful, if
 You can define version specific code in the text via comments:
 
 ```java
-		//#1.16.1
-		System.out.println("Only enabled in 1.16.1 and above");
-		//#end
+	//#1.16.1
+	System.out.println("Only enabled in 1.16.1 and above");
+	//#end
 ```
 
 In other versions this line will be commented out.
 
 This works also with multiple version statements:
 ```java
-		//# 1.15.2
-//$$		System.out.println("Only enabled in 1.15.2 and above");
-		//# 1.14.4
-		System.out.println("Only enabled in 1.14.4 and above");
-		//# end
+	//# 1.15.2
+//$$	System.out.println("Only enabled in 1.15.2 and above");
+	//# 1.14.4
+	System.out.println("Only enabled in 1.14.4 and above");
+	//# end
 ```
 
 Version blocks can be defined in the main build.gradle:
@@ -34,12 +34,12 @@ discombobulator {
 ```
 where *1.15.2* is the name defining the version block and *Fabric1.15.2* being the folder that contains this version.
 
-It's advisable to always go from highest version to lowest in the list, the order in the build.gradle matters!
+It's advisable to always go from highest version to lowest in the list, the order in the build.gradle dictates the order of how version blocks get processed!
 
 The order can be reversed when adding `inverted = true` to the file.
 
 ### Patterns
-Patterns one line version blocks, which are useful for smaller changes.
+Patterns are one line version blocks, which are useful for smaller changes.
 
 Similar to version blocks, patterns are defined in the discombobulator block in the build.gradle:
 ```groovy
