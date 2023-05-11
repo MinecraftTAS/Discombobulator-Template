@@ -8,6 +8,3 @@
 **/build/
 **/bin/
 **/*.launch
-
-
-!1.14.4+/src
