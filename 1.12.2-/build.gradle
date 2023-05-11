@@ -1,0 +1,17 @@
+plugins {
+	id 'discombobulator' version '1.2.0'
+}
+
+discombobulator {
+	versions = [
+		"1.14.4:Fabric1.14.4",
+		"1.15.2:Fabric1.15.2",
+		"1.16.1:Fabric1.16.1",
+		"1.16.5:Fabric1.16.5",
+		"1.17.1:Fabric1.17.1",
+		"1.18.2:Fabric1.18.2",
+		"1.19.2:Fabric1.19.2",
+		"1.19.3:Fabric1.19.3",
+		"1.19.4:Fabric1.19.4"
+	]
+}

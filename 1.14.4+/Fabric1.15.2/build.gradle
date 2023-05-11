@@ -1,0 +1,11 @@
+plugins {
+	id 'fabric-loom' version "{project.LoomVersion}"
+}
+
+sourceCompatibility = targetCompatibility = 17
+
+dependencies {
+	minecraft "com.mojang:minecraft:1.15.2"
+	mappings loom.officialMojangMappings()
+	modImplementation "net.fabricmc:fabric-loader:{project.LoaderVersion}"
+}
