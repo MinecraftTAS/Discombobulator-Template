@@ -1,12 +1,12 @@
 {
 	"required": true,
 	"minVersion": "0.8",
-	"package": "template.mixin",
+	"package": "com.minecrafttas.disco_template.mixin",
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [
 	],
 	"client": [
-		"MixinTitleScreen"
+		"MixinMinceraft"
 	],
 	"injectors": {
 		"defaultRequire": 1

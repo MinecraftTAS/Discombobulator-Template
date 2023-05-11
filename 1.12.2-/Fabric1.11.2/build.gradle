@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-	minecraft "com.mojang:minecraft:1.12.2"
-	mappings "net.legacyfabric:yarn:1.12.2+build.mcp"
-	modImplementation "net.fabricmc:fabric-loader:0.14.11"
+	minecraft "com.mojang:minecraft:1.11.2"
+	mappings "net.legacyfabric:yarn:1.11.2+build.mcp"
+	modImplementation "net.fabricmc:fabric-loader:"+project.LoaderVersion
 }

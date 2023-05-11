@@ -1,7 +1,13 @@
-.gradle/
-.project
-.settings/
+**/.gradle/
+**/.settings/
+**/.project
+**/.classpath
+**/build
+*/*/src
+**/run/
+**/build/
+**/bin/
+**/*.launch
 
-1.14.4+/.gradle/
-1.14.4+/.settings/
-1.14.4+/.project
+
+!1.14.4+/src
