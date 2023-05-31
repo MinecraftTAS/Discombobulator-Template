@@ -7,18 +7,18 @@ repositories {
 }
 
 base { 
-	archivesName = "${ArchiveName}-${ModVersion}"
+	archivesName = "${mod_name}-${mod_version}"
 }
 
 dependencies {
-	modImplementation "net.fabricmc:fabric-loader:"+project.LoaderVersion
+	modImplementation "net.fabricmc:fabric-loader:"+project.loader_version
 }
 
 processResources {
-	inputs.property "version", project.ModVersion
+	inputs.property "version", project.mod_version
 
 
     filesMatching("fabric.mod.json") {
-        expand 'mod_version': project.ModVersion
+        expand 'mod_version': project.mod_version
     }
 }

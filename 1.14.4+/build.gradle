@@ -1,5 +1,5 @@
 plugins {
-	id 'discombobulator' version "${DiscombobulatorVersion}"
+	id 'discombobulator' version "${discombobulator_version}"
 }
 
 discombobulator {
