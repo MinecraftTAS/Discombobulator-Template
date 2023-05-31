@@ -13,8 +13,8 @@ public class MixinMinceraft {
 	
 	@Shadow
 	//#def
-//$$	@org.spongepowered.asm.mixin.Mutable
-//$$	private float minceraftRoll;
+	@org.spongepowered.asm.mixin.Mutable
+	private float minceraftRoll;
 	//#1.10.2
 //$$	private float updateCounter;
 	//#end
@@ -22,7 +22,7 @@ public class MixinMinceraft {
 	@Inject(method = "initGui", at = @At("HEAD"))
 	public void inject_initGui(CallbackInfo ci) {
 		//#def
-//$$		minceraftRoll = 0;
+		minceraftRoll = 0;
 		//#1.10.2
 //$$		updateCounter = 0;
 		//#end

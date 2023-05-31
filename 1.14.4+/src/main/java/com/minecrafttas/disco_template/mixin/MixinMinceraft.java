@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 //#1.19.4
 //$$@Mixin(net.minecraft.client.gui.components.LogoRenderer.class)
 //#def
-//$$@Mixin(net.minecraft.client.gui.screens.TitleScreen.class)
+@Mixin(net.minecraft.client.gui.screens.TitleScreen.class)
 //#end
 public class MixinMinceraft {
 	
@@ -19,19 +19,19 @@ public class MixinMinceraft {
 	//#1.19.4
 //$$	private boolean showEasterEgg;
 	//#def
-//$$	private boolean minceraftEasterEgg;
+	private boolean minceraftEasterEgg;
 	//#end
 	
 	//#1.19.4
 //$$	@Inject(method = "renderLogo", at = @At("HEAD"))
 	//#def
-//$$	@Inject(method = "init", at = @At("HEAD"))
+	@Inject(method = "init", at = @At("HEAD"))
 	//#end
 	public void inject_init(CallbackInfo ci) {
 		//#1.19.4
 //$$		showEasterEgg = true;
 		//#def
-//$$		minceraftEasterEgg = true;
+		minceraftEasterEgg = true;
 		//#end
 	}
 }

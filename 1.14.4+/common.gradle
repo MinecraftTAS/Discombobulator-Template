@@ -1,0 +1,20 @@
+java {
+	sourceCompatibility = targetCompatibility = 17
+}
+
+base { 
+	archivesName = "${ArchiveName}-${ModVersion}"
+}
+
+dependencies {
+	modImplementation "net.fabricmc:fabric-loader:"+project.LoaderVersion
+}
+
+processResources {
+	inputs.property "version", project.ModVersion
+
+
+    filesMatching("fabric.mod.json") {
+        expand 'mod_version': project.ModVersion
+    }
+}

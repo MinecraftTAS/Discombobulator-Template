@@ -24,7 +24,7 @@ public class ModContainer implements ModInitializer{
 		//# 1.15.2
 //$$		System.out.println("Only enabled in 1.15.2 and above");
 		//# 1.14.4
-//$$		System.out.println("Only enabled in 1.14.4 and above");
+		System.out.println("Only enabled in 1.14.4 and above");
 		//# end
 		
 		
@@ -35,7 +35,7 @@ public class ModContainer implements ModInitializer{
 		//# 1.18.2
 //$$		System.out.println("Only enabled in 1.18.2 and above");
 		//# def
-//$$		System.out.println("Only enabled in 1.14.4 and above");
+		System.out.println("Only enabled in 1.14.4 and above");
 		//# end
 		
 		
@@ -44,7 +44,7 @@ public class ModContainer implements ModInitializer{
 		///////////////////////////////////////
 		
 		//# def
-//$$		System.out.println("Only enabled in 1.14.4 and above");
+		System.out.println("Only enabled in 1.14.4 and above");
 		//# 1.18.2
 //$$		System.out.println("Only enabled in 1.18.2 and above");
 		//# end
