@@ -1,0 +1,24 @@
+java {
+	sourceCompatibility = targetCompatibility = 1.8
+}
+
+repositories {
+	maven { url = "https://raw.githubusercontent.com/BleachDev/cursed-mappings/main/" }
+}
+
+base { 
+	archivesName = "${ArchiveName}-${ModVersion}"
+}
+
+dependencies {
+	modImplementation "net.fabricmc:fabric-loader:"+project.LoaderVersion
+}
+
+processResources {
+	inputs.property "version", project.ModVersion
+
+
+    filesMatching("fabric.mod.json") {
+        expand 'mod_version': project.ModVersion
+    }
+}

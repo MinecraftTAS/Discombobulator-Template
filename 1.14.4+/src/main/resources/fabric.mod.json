@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "discotemplate",
-	"version": "1.0.0",
+	"version": "${mod_version}",
 	"name": "Test",
 	"description": "A disco template!",
 	"authors": [
