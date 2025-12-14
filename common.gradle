@@ -5,11 +5,12 @@ java {
 }
 
 def snapshot = project.release=="true" ? "" : "-SNAPSHOT"
-version = project.mod_version + snapshot
+def mod_version = project.mod_version
+version = mod_version + snapshot
 group = project.maven_group
 
 base {
-	archivesName = "${mod_name}-${mod_version}"
+	archivesName = "${mod_name}-${minecraft_version}"
 }
 
 //tasks.withType(JavaCompile).configureEach {
@@ -55,10 +56,10 @@ loom {
 }
 
 processResources {
-	inputs.property "version", project.mod_version
+	inputs.property "version", mod_version
 
 
     filesMatching("fabric.mod.json") {
-        expand 'mod_version': project.mod_version
+        expand 'mod_version': mod_version
     }
 }
