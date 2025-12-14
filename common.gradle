@@ -1,12 +1,13 @@
 java {
-	sourceCompatibility = targetCompatibility = 25
+	sourceCompatibility = targetCompatibility = 21
 	// withSourcesJar()
 	// withJavadocJar()
 }
 
 def snapshot = project.release=="true" ? "" : "-SNAPSHOT"
-def mod_version = project.mod_version
-version = mod_version + snapshot
+def mod_version = project.mod_version + snapshot
+def allowed_mc_version = project.allowed_mc_version
+version = mod_version
 group = project.maven_group
 
 base {
@@ -57,9 +58,12 @@ loom {
 
 processResources {
 	inputs.property "version", mod_version
+	inputs.property "allowedMcVersion", allowed_mc_version
 
-
-    filesMatching("fabric.mod.json") {
-        expand 'mod_version': mod_version
-    }
+	filesMatching("fabric.mod.json") { file -> 
+		expand "version": mod_version
+        filter { String line ->
+            line.replace('"minecraft": "*",', '"minecraft": "' + allowed_mc_version + '",')
+        };
+	}
 }
