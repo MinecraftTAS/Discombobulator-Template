@@ -1,5 +1,5 @@
 java {
-	sourceCompatibility = targetCompatibility = 21
+	sourceCompatibility = targetCompatibility = 25
 	// withSourcesJar()
 	// withJavadocJar()
 }
@@ -12,9 +12,9 @@ base {
 	archivesName = "${mod_name}-${mod_version}"
 }
 
-tasks.withType(JavaCompile).configureEach {
-	it.options.release = 21
-}
+//tasks.withType(JavaCompile).configureEach {
+//	it.options.release = 21
+//}
 
 dependencies {
 	modImplementation "net.fabricmc:fabric-loader:"+project.loader_version
@@ -45,11 +45,11 @@ loom {
 	runs {
 		client {
 			ideConfigGenerated = true
-			vmArgs "-Dlotaslight.log.level=debug"
+			vmArgs "-Dmodid.log.level=debug"
 		}
 		server {
 			ideConfigGenerated = true
-			vmArgs "-Dlotaslight.log.level=debug"
+			vmArgs "-Dmodid.log.level=debug"
 		}
 	}
 }
