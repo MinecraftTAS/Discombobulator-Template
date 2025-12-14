@@ -19,14 +19,14 @@ discombobulator {
 	//
 	// // # 25w09b
 	// Minecraft.getMinecraft();
-	// // # 1.21.4
+	// // # 1.21.11
 	// Minecraft.getMinecraft();
 	// // # oneblockAtATime
 	// Yay
 	//
 	//
 	versions = [
-		"1.21.4":"",
+		"1.21.11":"",
 		"1.20.6":"",
 		"1.19.4":"",
 		"1.18.2":"",
